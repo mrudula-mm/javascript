@@ -12,8 +12,7 @@ console.log(array1.length);
 // eslint-disable-next-line max-len
 // b. Convert all the items of the array to data type number and console each items data
 //  type, use any of the array iteration methods provided by JS for iteration
-// eslint-disable-next-line radix, no-plusplus
-for (let i = 0; i < array1.length; i++) {
+for (let i = 0; i < array1.length; i += 1) {
   array1[i] = Number(array1[i]);
   console.log(typeof array1[i]);
 }
@@ -33,13 +32,11 @@ console.log(array2);
 const array3 = ['1', '2', '3', '4', '5', '6', '7'];
 const newArray = array3.join('');
 console.log(newArray);
-// eslint-disable-next-line no-plusplus
-for (let i = 0; i < array3.length; i++) {
+for (let i = 0; i < array3.length; i += 1) {
   array3[i] = Number(array3[i]);
 }
 console.log(typeof array3[3]);
 let sum = 0;
-// eslint-disable-next-line vars-on-top, no-var
 for (let i = 0; i < array3.length; i += 1) {
   sum += array3[i];
 }

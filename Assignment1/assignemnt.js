@@ -15,6 +15,7 @@ const arrayVariable = [1, 2, 3, 4];
 console.log('arrayVariable:', typeof arrayVariable);
 const usingTemplateLiterals = `${numberVariable} ${stringVariable} ${booleanVariable} ${nullVariable} ${undefinedVariable}`;
 console.log('usingTemplateLiterals:', usingTemplateLiterals);
-// eslint-disable-next-line no-useless-concat
-const withoutTempalteLiterals = `${numberVariable} ` + ` ${stringVariable} ${booleanVariable} ${nullVariable} ${undefinedVariable}`;
+const withoutTempalteLiterals = numberVariable + ' ' + stringVariable + ' ' + booleanVariable + ' ' + nullVariable + ' ' + undefinedVariable;
 console.log('withoutTempalteLiterals:', withoutTempalteLiterals);
+// eslint-disable-next-line no-alert
+alert('Welcome');

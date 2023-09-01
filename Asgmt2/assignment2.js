@@ -30,14 +30,15 @@ console.log(array2);
 // of all items of the array and also console the sum of all the items
 //  ( convert to integer before calculating)
 const array3 = ['1', '2', '3', '4', '5', '6', '7'];
-const newArray = array3.join('');
-console.log(newArray);
+let stringConcatenation = '';
+array3.forEach((item) => {
+  stringConcatenation += item;
+});
+console.log(stringConcatenation);
+let sum = 0;
 for (let i = 0; i < array3.length; i += 1) {
   array3[i] = Number(array3[i]);
   console.log(typeof array3[i]);
-}
-let sum = 0;
-for (let i = 0; i < array3.length; i += 1) {
   sum += array3[i];
 }
 console.log(sum);
@@ -59,11 +60,10 @@ for (let i = 0; i < array4.length; i += 1) {
 // g. [1, 2, "3", 4, 5, 6,"7"]  Compare this array with the above given array and
 //  console only if both items of the array have same data type. (Compare each item of
 // this array with each item of the other array)
-const array7 = ['1', '2', '3', '4', '5', '6', '7'];
-const array8 = [1, 2, '3', 4, 5, 6, '7'];
-for (let i = 0; i < array7.length && i < array8.length; i += 1) {
-  if (typeof array7[i] === typeof array8[i]) {
-    console.log(array7[i], array8[i]);
+const givenArray = [1, 2, '3', 4, 5, 6, '7'];
+for (let i = 0; i < givenArray.length; i += 1) {
+  if (typeof givenArray[i] === typeof array4[i]) {
+    console.log(givenArray[i]);
   }
 }
 /* *********1.h************ */

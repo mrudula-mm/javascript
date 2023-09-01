@@ -34,8 +34,8 @@ const newArray = array3.join('');
 console.log(newArray);
 for (let i = 0; i < array3.length; i += 1) {
   array3[i] = Number(array3[i]);
+  console.log(typeof array3[i]);
 }
-console.log(typeof array3[3]);
 let sum = 0;
 for (let i = 0; i < array3.length; i += 1) {
   sum += array3[i];

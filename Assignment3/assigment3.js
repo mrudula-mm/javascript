@@ -83,7 +83,8 @@ const objectArray = {
   p: 'do',
   q: 'one',
 };
-console.log(Object.keys(objectArray));
+const reverseArray = (Object.keys(objectArray));
+console.log(reverseArray.reverse(reverseArray));
 // ******************8***********************
 // 8.Given var string = "Javascript is the King of the web."
 // a) Get the length of the string.
@@ -130,3 +131,26 @@ for (let i = 0; i < stringArray.length; i += 1) {
 }
 console.log(countOfThe);
 console.log(countOfOf);
+// j) pad string with "*" and set the total length of the
+//  string as 30, displayed at right side.
+const padString = (string.slice(0, 30));
+const news = padString.padEnd(string.length, '*');
+console.log(news);
+console.log(padString.length);
+// ******************4***********************
+// Create a function that takes 2 arguments, 1st argument being any array of items,
+// 2nd being any one of the item name either in the passed array or not in the passed
+// array, the function should delete the passed item if it exists in the array, if it
+// doesn't exist then the item should be inserted into the array, finnally console the output.
+function arrayFunction(arrayItem, item) {
+  const index = arrayItem.indexOf(item);
+  if (index !== -1) {
+    arrayItem.splice(index, 1);
+  } else {
+    arrayItem.push(item);
+  }
+  console.log(arrayItem);
+}
+const resultedArray = ['car', 'bike', 'cycle'];
+arrayFunction(resultedArray, 'bike');
+arrayFunction(resultedArray, 'motorcycle');

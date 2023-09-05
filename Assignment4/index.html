@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="title">assignment4</title>
+</head>
+<body>
+    <!-- 2.Store your basic details in local storage of the browser every time the
+page loads, then console them and finally delete them after 1 minute of
+the page load. -->
+
+    <input type="text" id="username" placeholder="username"><br><br>
+    <input type="email" id="email" placeholder="email"><br><br>
+    <input type="password" id="password" placeholder="password"><br><br>
+    <input type="submit" onclick="test()"><br><br>
+    <!-- ************5************** -->
+    <!-- 5.Create a div with background color red, create buttons
+a.to hide the div
+b.to change the background color of the div
+c.to show your basic details on the div, the details should hide/show,
+on the click. -->
+
+    <div id="mainDiv" style="background-color: red; height: 500px; width: 500px;">
+        <div id="detailsDiv" hidden>
+            <h1>Welcome..!!</h1>
+        </div>
+    </div>
+    <div>
+        <button id="hide">Hide Div</button>
+        <button id="color">Color Change</button>
+        <button id="details">Show Details</button>
+    </div><br><br>
+    <!-- ************8************** -->
+    <!-- 8.Create a form with a text field which when submitted, will change the tab title
+to whatever is entered, limit the field to 50 characters, otherwise show an error
+message, and stay on the same page when submitted(it shouldn't refresh). -->
+
+    <div>
+        <form action="">
+            <label for="description">Enter Description: </label>
+            <textarea name="" id="description" cols="30" rows="10"></textarea>
+            <small id="error"></small>
+
+            <button type="submit" onclick="return formSubmit()">Submit</button>
+        </form>
+
+    </div>
+    <!-- ************************** -->
+     <!-- 6.Create a select box with numbers 1 to 10,  when selected 9, you should change the selection to
+10 and show a message that "9 is fully occupied please select another number", when selected any
+ number other than 9 it should show a message as "you selected 'particular number' " in a div, on
+ hovering the div it should change the background color of the div into a highlighting shade,
+whilethe mouse pointer leaves the message area the background color should go back to as
+before(don't use CSS to attain the hovering functionality) -->
+
+    <select id="number" onchange="selectionChange()">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+    </select>
+
+    <div id="msg" onmouseover="hoverDiv()" onmouseout="unhoverDiv()">
+        <p id="message"></p>
+    </div><br><br>
+    <!-- ********************************* -->
+    <!-- 7.Consider an array with names of 10 programming languages, make 10 buttons by
+    iterating this array, when clicked on each button the name of the programming
+    language should be shown in a corresponding div. -->
+
+    <div>
+        <button onclick="showLanguage(1)">Javascript</button>&nbsp;
+        <button onclick="showLanguage(2)">Python</button>&nbsp;
+        <button onclick="showLanguage(3)">C++</button>&nbsp;
+        <button onclick="showLanguage(4)">C</button>&nbsp;
+        <button onclick="showLanguage(5)">Ruby</button>&nbsp;
+        <button onclick="showLanguage(6)">php</button>&nbsp;
+        <button onclick="showLanguage(7)">Typescript</button>&nbsp;
+        <button onclick="showLanguage(8)">GoLang</button>&nbsp;
+        <button onclick="showLanguage(9)">Java</button>&nbsp;
+        <button onclick="showLanguage(10)">SQL</button>&nbsp;<br><br>
+    </div>
+
+    <div id="langToDisplay">
+
+    <!-- **************3******************* -->
+    <!-- 3.Create a form and submit button, on click of the button
+    store your basic details from the form in the cookies.  -->
+    <form id="form">
+        <input type="text" id="key" placeholder="enter key"><br><br>
+        <input type="text" id="value" placeholder="enter value"><br><br>
+        <button>create cookie</button>
+    </form>
+    </div>    <script src="assignment4.js"></script>
+</body>
+</html>

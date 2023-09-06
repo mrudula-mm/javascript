@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>assignment5</title>
+</head>
+<body>
+    <div>
+    <form onsubmit="return validate()">
+        <label>Name:</label>
+        <input type="text" id="username"><br>
+        <span id="error1"></span><br><br><br>
+
+        <label>phone number:</label>
+        <input type="text" id="phnnumber"><br>
+        <span id="error2"></span><br><br><br>
+
+        <label>place:</label>
+        <input type="text" id="place"><br>
+        <span id="error3"></span><br><br><br>
+
+        <label>Company name:</label>
+        <input type="text" id="companyName"><br>
+        <span id="error4"></span><br><br><br>
+        
+        <label>Pin code:</label>
+        <input type="text" id="pinCode"><br>
+        <span id="error5"></span><br><br><br>
+
+        <button >submit</button><br><br>
+        <button id="mybutton" onclick="prepopulateForm()">Prepopulate</button><br><br>
+    </form>
+</div>
+<div id="container"></div>
+    <script src="assignment5.js"></script>
+</body>
+</html>

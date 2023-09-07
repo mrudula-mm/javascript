@@ -102,16 +102,12 @@ function prepopulateForm() {
 }
 // ********4**********
 // 4.Create a static variable and console it by accessing it.
-class Person {
-  name = 'ram';
-
-  getName() {
-    return this.name;
-  }
+class number {
+  static staticVaraible = 25;
 }
-const person = new Person();
+const value = number.staticVaraible;
 // eslint-disable-next-line no-console
-console.log(person.getName());
+console.log(`static variable:${value}`);
 // ************3**************
 // 3.Create a private variable and console it by accessing it.
 class Private {

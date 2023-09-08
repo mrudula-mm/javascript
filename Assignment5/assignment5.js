@@ -128,8 +128,10 @@ const button = document.createElement('button');
 button.textContent = 'clickme';
 const container = document.getElementById('container');
 container.appendChild(button);
+const datadiv = document.createElement('div');
+container.appendChild(datadiv);
 button.addEventListener('click', () => {
-  const div = document.createElement('div');
-  div.textContent = 'Name: Ram, Age: 35';
-  container.appendChild(div);
+  const name = 'Mrudula M M';
+  const place = 'Thrissur';
+  datadiv.textContent = `Name: ${name}, Place: ${place}`;
 });

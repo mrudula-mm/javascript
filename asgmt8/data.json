@@ -1,0 +1,21 @@
+[
+    {   
+        "id" : "1",
+        "name": "Mrudula",
+        "place" : "Thrissur",
+        "salary": 10000
+    },
+    {   
+        "id" : "2",
+        "name": "Rakesh",
+        "place" : "kannur",
+        "salary": 8000
+    },
+    {   
+        "id" : "3",
+        "name": "Ram",
+        "place" : "kozhikode",
+        "salary": 9000
+    }
+
+]

@@ -49,18 +49,19 @@ console.log(inputData);
 // inside a map function and
 // console each item by using switch statement.
 const array1 = ['car', 1, 5, 'js', 'node js', 'mysql', 'sql'];
-const finalArray = array1.map((newArray) => {
-  switch (newArray) {
-    case 1:
-      console.log(`${newArray}`);
+// eslint-disable-next-line array-callback-return
+array1.map((item) => {
+  // eslint-disable-next-line default-case
+  switch (array1.indexOf(item)) {
+    case array1.indexOf(item):
+      console.log(item);
       break;
-    default:
-      console.log(`${newArray}`);
+    case 'default':
+      console.log(item);
+      break;
   }
-  return newArray;
 });
 
-console.log(finalArray);
 // ****************2*************************
 // 2.[1, 2, 3, 4. 5, 6] : Write a closure function to delete
 //  indexes 5 and 2 of this array.

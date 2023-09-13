@@ -8,9 +8,13 @@ function test() {
   const pw = document.getElementById('password').value;
   const email = document.getElementById('email').value;
 
-  const user = localStorage.setItem('uid', uid);
-  const pass = localStorage.setItem('pw', pw);
-  const em = localStorage.setItem('email', email);
+  localStorage.setItem('uid', uid);
+  localStorage.setItem('pw', pw);
+  localStorage.setItem('email', email);
+
+  console.log(localStorage.getItem('uid'));
+  console.log(localStorage.getItem('pw'));
+  console.log(localStorage.getItem('email'));
 }
 setTimeout(() => {
   localStorage.removeItem('uid');
@@ -175,6 +179,7 @@ document.getElementById('form').addEventListener('submit', (e) => {
   if (key === '' || value === '') {
     alert('please enter all feilds');
   } else {
+    // eslint-disable-next-line no-use-before-define
     setCookie(key, value, 365);
   }
 });

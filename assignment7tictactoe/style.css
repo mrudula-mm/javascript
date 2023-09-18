@@ -1,0 +1,46 @@
+#header_text {
+    font-size: 50px;
+    color: black;
+    padding: 10px 20px;
+}
+.mainContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin-bottom: 20px;
+}
+
+.cell {
+    background: white;
+    height: 150px;
+    width: 150px;
+    border: 3px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px;
+    cursor: pointer;
+}
+
+#resetButton {
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+}
+#startButton{
+    padding: 10px 15px;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: white;
+}
+label{
+    font-size: 20px;
+    margin-right: 239px;
+    margin-bottom: -20px;
+}

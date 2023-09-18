@@ -7,13 +7,12 @@ const headerText = document.getElementById('header_text');
 const player1Input = document.getElementById('player1');
 const player2Input = document.getElementById('player2');
 const cells = [null, null, null, null, null, null, null, null, null];
-const oValue = 'o';
-const xValue = 'x';
-let currentPlayer = oValue;
 let winnerIds = [];
-
 let movements = 0;
 let gameStarted = false;
+let player1Name = '';
+let player2Name = '';
+let currentPlayer = '';
 function bindClickEvent() {
   boxes.forEach((cell) => {
     // eslint-disable-next-line no-use-before-define
@@ -33,12 +32,11 @@ function boxClickFunction(e) {
 
     // eslint-disable-next-line no-use-before-define
     if (hasPlayerWon(currentPlayer)) {
-      const winnerName = currentPlayer === oValue ? player1Input.value : player2Input.value;
-      headerText.innerHTML = `${winnerName} has won!!`;
+      headerText.innerHTML = `${currentPlayer} has won`;
     } else if (movements === 9) {
       headerText.innerHTML = 'tie!!';
     } else {
-      currentPlayer = currentPlayer === oValue ? xValue : oValue;
+      currentPlayer = currentPlayer === player1Name ? player2Name : player1Name;
     }
   }
 }
@@ -78,7 +76,6 @@ function hasPlayerWon() {
     return true;
   }
 }
-
 function reset() {
   winnerIds = [];
   cells.forEach((val, index) => {
@@ -89,12 +86,14 @@ function reset() {
     cell.innerHTML = '';
   });
   headerText.innerHTML = 'Start Game!!';
-  currentPlayer = oValue;
   movements = 0;
   gameStarted = false;
 }
 startBtn.addEventListener('click', () => {
   if (player1Input.value && player2Input.value) {
+    player1Name = player1Input.value;
+    player2Name = player2Input.value;
+    currentPlayer = player1Name;
     bindClickEvent();
     gameStarted = true;
   } else {
